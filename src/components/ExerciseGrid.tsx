@@ -121,8 +121,7 @@ const ExerciseGrid = () => {
             description: `Este es un ‘Finisher’ por lo que haces 1 ó 2 sets dependiendo de tu nivel de fatiga.
             Usa un peso con el que logres llegar al total de las reps
             sin parar. Si necesitas baja el peso y continua.
-            Hazlo con control, sin tempo.`
-        },
+            Hazlo con control, sin tempo.`        },
     ]
   return (
     <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 5}} padding='10px'>
