@@ -1,7 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react"
 import ExerciseCard from "./ExerciseCard"
 
-
 const ExerciseGrid = () => {
     const exercises = [
         {
@@ -128,7 +127,7 @@ const ExerciseGrid = () => {
   return (
     <SimpleGrid columns={{sm: 1, md: 2, lg: 3, xl: 5}} padding='10px'>
         {exercises.map((exercise) => ( 
-          <ExerciseCard key={exercise.id} exercise={exercise}/>
+          <ExerciseCard key={exercise?.id} exercise={exercise}/>
         ))}
     </SimpleGrid>
   )

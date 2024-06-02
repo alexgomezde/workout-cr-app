@@ -12,11 +12,15 @@ interface Exercise {
 }
 
 interface Props {
-    exercise: Exercise
+    exercise?: Exercise
 }
 
 
 const ExerciseCard = ({exercise} : Props) => {
+    if (!exercise) {
+        return null; 
+    }
+
   return (
     <Card margin='5px' borderRadius='10px' overflow='hidden'>
         <AspectRatio width='100%' ratio={1}>
