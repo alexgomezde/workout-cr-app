@@ -9,15 +9,15 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-interface Exercise {
+export interface Exercise {
   id: string;
   name: string;
-  video: string;
-  sets: number;
-  reps: number;
+  video?: string;
+  sets?: string;
+  reps?: string;
   tempo?: string;
   rest?: string;
-  description: string;
+  description?: string;
 }
 
 interface Props {

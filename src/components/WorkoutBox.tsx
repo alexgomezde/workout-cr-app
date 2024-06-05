@@ -1,32 +1,22 @@
 import {
   Box,
   Button,
-  Center,
+  Flex,
   HStack,
   Heading,
   SimpleGrid,
 } from "@chakra-ui/react";
 import ExerciseCard from "./ExerciseCard";
 import { useState } from "react";
-
-interface Exercise {
-  id: string;
-  name: string;
-  video: string;
-  sets: number;
-  reps: number;
-  tempo?: string;
-  rest?: string;
-  description: string;
-}
+import { Exercise } from "./ExerciseCard";
 
 interface Workout {
   name: string;
-  exercises?: Exercise[];
+  exercises?: Exercise[] | any[];
 }
 
 interface Props {
-  workout?: Workout;
+  workout: Workout;
 }
 
 const WorkoutBox = ({ workout }: Props) => {
@@ -38,8 +28,7 @@ const WorkoutBox = ({ workout }: Props) => {
     setShow(!show);
   };
 
-  const exercises = workout.exercises || []; // Default to an empty array if exercises is undefined or null
-
+  const exercises = workout.exercises || [];
   return (
     <Box
       padding="10px"
@@ -47,12 +36,10 @@ const WorkoutBox = ({ workout }: Props) => {
       border="1px solid white"
       margin="10px"
     >
-      <HStack justifyContent="space-between">
-        <Center>
-          <Heading marginBottom="20px" size="md">
-            {workout.name}
-          </Heading>
-        </Center>
+      <HStack justifyContent="space-between" alignItems="center">
+        <Heading marginBottom="20px" size="md">
+          {workout.name}
+        </Heading>
 
         <Button onClick={toggle}>{show ? "Ocultar" : "Mostrar"}</Button>
       </HStack>
