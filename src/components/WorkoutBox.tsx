@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Flex,
-  HStack,
-  Heading,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, SimpleGrid } from "@chakra-ui/react";
 import ExerciseCard from "./ExerciseCard";
 import { useState } from "react";
 import { Exercise } from "./ExerciseCard";
